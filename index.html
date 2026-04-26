@@ -433,7 +433,7 @@
               </div>
               <div class="proj-links">
                 <a href="https://restaurante-iota-liart.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-link" data-i18n="proj.demo">Live Demo</a>
-                <a href="https://github.com/JostinRendonL" target="_blank" rel="noopener noreferrer" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
+                <a href="#" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
               </div>
             </div>
           </div>
@@ -454,7 +454,7 @@
               </div>
               <div class="proj-links">
                 <a href="https://bladeco.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-link" data-i18n="proj.demo">Live Demo</a>
-                <a href="https://github.com/JostinRendonL" target="_blank" rel="noopener noreferrer" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
+                <a href="#" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
               </div>
             </div>
           </div>
@@ -475,7 +475,7 @@
               </div>
               <div class="proj-links">
                 <a href="https://nova-beta-navy.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-link" data-i18n="proj.demo">Live Demo</a>
-                <a href="https://github.com/JostinRendonL" target="_blank" rel="noopener noreferrer" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
+                <a href="#" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
               </div>
             </div>
           </div>
@@ -542,7 +542,7 @@
               </div>
               <div class="proj-links">
                 <a href="#home"  class="proj-link" data-i18n="proj.viewing">You're Here</a>
-                <a href="https://github.com/JostinRendonL" target="_blank" rel="noopener noreferrer" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
+                <a href="#contact" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
               </div>
             </div>
           </div>
@@ -713,6 +713,11 @@
               <span class="form-error" id="msgErr" data-i18n="form.msgErr">Please enter a message.</span>
             </div>
 
+            <!-- Anti-spam honeypot — hidden from real users, filled by bots -->
+            <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;overflow:hidden">
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            </div>
+
             <button type="submit" class="btn-primary btn-submit" id="submitBtn">
               <span data-i18n="form.send">Send Message</span>
               <span class="btn-arrow">→</span>
@@ -754,6 +759,6 @@
   <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="script.js"></script>
+  <script type="module" src="src/main.js"></script>
 </body>
 </html>
