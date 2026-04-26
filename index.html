@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jostin Rendon — Web Developer, IT Support & Virtual Assistant. Systems Engineering student based in Guayaquil, Ecuador." />
+  <title>Jostin Rendon — Developer & Tech Specialist</title>
+
+  <!-- Fonts: Syne (headings) + DM Sans (body) — distinctive, non-generic pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ▸▸ CURSOR (custom) -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ▸▸ LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-text">JR</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="logo-bracket">[</span>JR<span class="logo-bracket">]</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about"      class="nav-link" data-i18n="nav.about">About</a>
+      <a href="#skills"     class="nav-link" data-i18n="nav.skills">Skills</a>
+      <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+      <a href="#projects"   class="nav-link" data-i18n="nav.projects">Projects</a>
+      <a href="#contact"    class="nav-link" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- i18n toggle -->
+      <div class="lang-toggle" id="langToggle" role="button" aria-label="Switch language">
+        <span class="lang-opt" data-lang="en">EN</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt" data-lang="es">ES</span>
+      </div>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <nav class="mobile-nav">
+      <a href="#about"      class="mobile-link" data-i18n="nav.about">About</a>
+      <a href="#skills"     class="mobile-link" data-i18n="nav.skills">Skills</a>
+      <a href="#experience" class="mobile-link" data-i18n="nav.experience">Experience</a>
+      <a href="#projects"   class="mobile-link" data-i18n="nav.projects">Projects</a>
+      <a href="#contact"    class="mobile-link" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="mobile-lang">
+      <span class="lang-opt" data-lang="en">EN</span>
+      <span class="lang-sep">/</span>
+      <span class="lang-opt" data-lang="es">ES</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <!-- Floating tech tags (Antigravity effect) -->
+    <div class="hero-floats" aria-hidden="true">
+      <span class="float-tag" style="--dx:15vw;--dy:18vh;--delay:0s">WordPress</span>
+      <span class="float-tag" style="--dx:78vw;--dy:12vh;--delay:0.4s">Python</span>
+      <span class="float-tag" style="--dx:8vw;--dy:72vh;--delay:0.8s">Elementor</span>
+      <span class="float-tag" style="--dx:82vw;--dy:68vh;--delay:1.2s">Linux</span>
+      <span class="float-tag" style="--dx:50vw;--dy:8vh;--delay:0.2s">IBM Certified</span>
+      <span class="float-tag" style="--dx:60vw;--dy:82vh;--delay:1.6s">Cybersecurity</span>
+      <span class="float-tag" style="--dx:25vw;--dy:88vh;--delay:1s">SQL</span>
+      <span class="float-tag" style="--dx:90vw;--dy:40vh;--delay:0.6s">Git</span>
+    </div>
+
+    <!-- Noise texture overlay -->
+    <div class="hero-noise" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">
+        <span class="eyebrow-dot"></span>
+        <span data-i18n="hero.eyebrow">Guayaquil, Ecuador · Available for Remote Work</span>
+      </p>
+
+      <h1 class="hero-title">
+        <span class="title-line reveal-up" style="--delay:0.1s">Jostin</span>
+        <span class="title-line title-accent reveal-up" style="--delay:0.2s">Rendon</span>
+      </h1>
+
+      <div class="hero-role reveal-up" style="--delay:0.3s">
+        <!-- Typing effect container -->
+        <span class="role-static" data-i18n="hero.roleStatic">I build</span>
+        <span class="role-typing" id="typingEl"></span>
+        <span class="typing-cursor" aria-hidden="true">|</span>
+      </div>
+
+      <p class="hero-desc reveal-up" style="--delay:0.4s" data-i18n="hero.desc">
+        Systems Engineering student with real-world experience in web development, IT support, and AI-powered automation. I don't just learn — I deliver.
+      </p>
+
+      <div class="hero-ctas reveal-up" style="--delay:0.5s">
+        <a href="#projects" class="btn-primary" data-i18n="hero.cta1">View My Work</a>
+        <a href="#contact"  class="btn-ghost"   data-i18n="hero.cta2">Let's Talk</a>
+      </div>
+
+      <div class="hero-stats reveal-up" style="--delay:0.6s">
+        <div class="stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label" data-i18n="hero.stat1">Real Projects</span>
+        </div>
+        <div class="stat-div" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label" data-i18n="hero.stat2">IBM Certifications</span>
+        </div>
+        <div class="stat-div" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">B2</span>
+          <span class="stat-label" data-i18n="hero.stat3">English Level</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span data-i18n="hero.scroll">scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal-left">
+          <div class="about-img-frame">
+            <img
+              src="Me.png"
+              alt="Jostin Rendón"
+              class="about-img"
+              loading="lazy"
+            />
+            <div class="img-badge">
+              <span class="badge-num">2026</span>
+              <span class="badge-label" data-i18n="about.badge">Open to Work</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <p class="sec-tag" data-i18n="about.tag">About Me</p>
+          <h2 class="sec-title" data-i18n="about.title">
+            More than a student —<br /><em>a professional</em>
+          </h2>
+          <p class="about-p" data-i18n="about.p1">
+            I'm a Systems Engineering student at the University of Guayaquil (evening program), which means I'm fully available during business hours. I've worked in real corporate environments — not just studied about them.
+          </p>
+          <p class="about-p" data-i18n="about.p2">
+            At RUBASA I led a full payroll data migration with zero errors. At QUIMPAC S.A. I independently maintained 30+ workstations. I use AI tools daily to automate workflows and build efficient solutions.
+          </p>
+          <p class="about-p" data-i18n="about.p3">
+            I'm bilingual (Cambridge B2 English), IBM-certified in Cybersecurity & Networking, and currently expanding into WordPress development and freelance consulting.
+          </p>
+
+          <div class="about-chips">
+            <span class="chip">🎓 <span data-i18n="chip.engineering">Systems Engineering</span></span>
+            <span class="chip">🌐 <span data-i18n="chip.bilingual">Bilingual EN/ES</span></span>
+            <span class="chip">🔒 <span data-i18n="chip.ibm">IBM Certified</span></span>
+            <span class="chip">⏰ <span data-i18n="chip.available">US Hours Available</span></span>
+            <span class="chip">🤖 <span data-i18n="chip.ai">AI-Powered Workflows</span></span>
+          </div>
+
+          <a href="Resume Jostin Rendon.pdf" download="Resume_Jostin_Rendon" class="btn-primary" data-i18n="about.cta">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <p class="sec-tag" data-i18n="skills.tag">Technical Stack</p>
+        <h2 class="sec-title" data-i18n="skills.title">What I Work With</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal-up" style="--delay:0s">
+          <div class="skill-icon">⚡</div>
+          <h3 data-i18n="skill.web">Web Development</h3>
+          <div class="skill-tags">
+            <span>WordPress</span><span>Elementor</span><span>HTML5</span>
+            <span>CSS3</span><span>JavaScript</span><span>Astra</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay:0.1s">
+          <div class="skill-icon">🔧</div>
+          <h3 data-i18n="skill.it">IT Support</h3>
+          <div class="skill-tags">
+            <span>Windows OS</span><span>Linux</span><span>AnyDesk</span>
+            <span>TeamViewer</span><span>Hardware</span><span>Tier-1</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay:0.2s">
+          <div class="skill-icon">🛡️</div>
+          <h3 data-i18n="skill.cyber">Cybersecurity</h3>
+          <div class="skill-tags">
+            <span>IBM Certified</span><span>Network Security</span>
+            <span>Cyberattacks</span><span>OS Security</span><span>Firewalls</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay:0.3s">
+          <div class="skill-icon">📊</div>
+          <h3 data-i18n="skill.admin">Administration</h3>
+          <div class="skill-tags">
+            <span>Excel</span><span>Google Sheets</span><span>IESS/SUT</span>
+            <span>Zendesk</span><span>Jira</span><span>Freshdesk</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay:0.4s">
+          <div class="skill-icon">🤖</div>
+          <h3 data-i18n="skill.ai">AI & Automation</h3>
+          <div class="skill-tags">
+            <span>ChatGPT</span><span>Claude</span><span>Prompt Engineering</span>
+            <span>Workflow Automation</span><span>AI Agents</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay:0.5s">
+          <div class="skill-icon">🌐</div>
+          <h3 data-i18n="skill.lang">Languages</h3>
+          <div class="skill-tags">
+            <span>Spanish (Native)</span><span>English B2</span>
+            <span>Cambridge Certified</span><span>Technical Writing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EXPERIENCE TIMELINE
+  ═══════════════════════════════════════ -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <p class="sec-tag" data-i18n="exp.tag">Experience & Education</p>
+        <h2 class="sec-title" data-i18n="exp.title">My Journey</h2>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Item -->
+        <div class="timeline-item reveal-up" style="--delay:0s">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <span class="tl-period">Aug 2025 – Feb 2026</span>
+                <h3 class="tl-role" data-i18n="exp.role1">Virtual Assistant & HR Administrative</h3>
+                <span class="tl-company">RUBASA</span>
+              </div>
+              <span class="tl-type work" data-i18n="tl.work">Work</span>
+            </div>
+            <ul class="tl-bullets">
+              <li data-i18n="exp.r1b1">Led full payroll data migration (IESS & SUT) — 100% of records, zero errors, on schedule.</li>
+              <li data-i18n="exp.r1b2">Managed complete employee file system: contracts, compliance, audit-ready documentation.</li>
+              <li data-i18n="exp.r1b3">Automated recurring admin tasks using AI tools, reducing manual effort across the team.</li>
+              <li data-i18n="exp.r1b4">Provided remote technical support via AnyDesk & TeamViewer to multi-location staff.</li>
+            </ul>
+            <div class="tl-stack">
+              <span>IESS/SUT</span><span>Excel</span><span>Google Workspace</span>
+              <span>AnyDesk</span><span>Claude AI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay:0.1s">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <span class="tl-period">Jan 2025 – Mar 2025</span>
+                <h3 class="tl-role" data-i18n="exp.role2">IT Support Intern</h3>
+                <span class="tl-company">QUIMPAC S.A.</span>
+              </div>
+              <span class="tl-type work" data-i18n="tl.work">Work</span>
+            </div>
+            <ul class="tl-bullets">
+              <li data-i18n="exp.r2b1">Independently maintained 30+ workstations with preventive & corrective maintenance.</li>
+              <li data-i18n="exp.r2b2">Deployed OS installations and software updates across the company network.</li>
+              <li data-i18n="exp.r2b3">Resolved Tier-1 support requests independently, escalating only complex cases.</li>
+              <li data-i18n="exp.r2b4">Documented all incidents using ServiceDesk/Freshdesk-style workflows.</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Windows OS</span><span>Hardware</span><span>Freshdesk</span>
+              <span>Google Workspace</span><span>MS Office</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay:0.2s">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <span class="tl-period">2026</span>
+                <h3 class="tl-role" data-i18n="exp.role3">Customer Service & Sales Agent</h3>
+                <span class="tl-company">Claro Ecuador — via Virtualtek</span>
+              </div>
+              <span class="tl-type work" data-i18n="tl.work">Work</span>
+            </div>
+            <ul class="tl-bullets">
+              <li data-i18n="exp.r3b1">Handled high-volume inbound calls for technical and administrative resolution.</li>
+              <li data-i18n="exp.r3b2">Consistently exceeded monthly sales targets: 15–20 closings vs. a baseline of 10.</li>
+              <li data-i18n="exp.r3b3">Developed strong objection handling and CRM documentation skills.</li>
+            </ul>
+            <div class="tl-stack">
+              <span>CRM</span><span>Sales</span><span>Customer Service</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay:0.3s">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <span class="tl-period">2025 – Present</span>
+                <h3 class="tl-role" data-i18n="exp.role4">Systems Engineering</h3>
+                <span class="tl-company">Universidad de Guayaquil</span>
+              </div>
+              <span class="tl-type edu" data-i18n="tl.edu">Education</span>
+            </div>
+            <ul class="tl-bullets">
+              <li data-i18n="exp.r4b1">Evening program — 100% available during US business hours (ET/CT/PT).</li>
+              <li data-i18n="exp.r4b2">Focus areas: software development, networking, databases, and information systems.</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Algorithms</span><span>Databases</span><span>Networks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay:0.4s">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <span class="tl-period">Apr 2026</span>
+                <h3 class="tl-role" data-i18n="exp.role5">IBM Cybersecurity & Networking Certifications</h3>
+                <span class="tl-company">IBM / Coursera</span>
+              </div>
+              <span class="tl-type cert" data-i18n="tl.cert">Certifications</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Computer Networks and Network Security</li>
+              <li>Introduction to Cybersecurity Tools & Cyberattacks</li>
+              <li>Cybersecurity Essentials</li>
+              <li>Cybersecurity Careers</li>
+              <li>Operating Systems: Overview, Administration & Security</li>
+            </ul>
+            <div class="tl-stack">
+              <span>IBM</span><span>Coursera</span><span>Verified</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <p class="sec-tag" data-i18n="proj.tag">Selected Work</p>
+        <h2 class="sec-title" data-i18n="proj.title">Projects That Exist</h2>
+        <p class="sec-sub" data-i18n="proj.sub">Not mockups. Not course exercises. Real pages, real code.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="proj-card reveal-up" style="--delay:0s">
+          <div class="proj-media">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="La Cueva Restaurant" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Unsplash API</span>
+              </div>
+              <div class="proj-links">
+                <a href="#" class="proj-link" data-i18n="proj.demo">Live Demo</a>
+                <a href="#" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.web">Web Design</span>
+            <h3 class="proj-name">La Cueva</h3>
+            <p class="proj-desc" data-i18n="proj.desc1">Full restaurant website with hero animations, interactive menu with filter tabs, gallery, reservations form, and full responsive design. Ecuadorian cuisine concept.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="proj-card reveal-up" style="--delay:0.1s">
+          <div class="proj-media">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80" alt="Blade & Co Barbershop" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>CSS Animations</span>
+              </div>
+              <div class="proj-links">
+                <a href="#" class="proj-link" data-i18n="proj.demo">Live Demo</a>
+                <a href="#" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.web">Web Design</span>
+            <h3 class="proj-name">Blade & Co.</h3>
+            <p class="proj-desc" data-i18n="proj.desc2">Premium barbershop landing page with full-screen hero, animated service cards, team section, gallery mosaic, and booking form. Dark luxury aesthetic.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="proj-card reveal-up" style="--delay:0.2s">
+          <div class="proj-media">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="MAISON Fashion Store" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>HTML5</span><span>CSS3</span><span>JS (i18n)</span><span>Cart System</span>
+              </div>
+              <div class="proj-links">
+                <a href="#" class="proj-link" data-i18n="proj.demo">Live Demo</a>
+                <a href="#" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.ecommerce">E-Commerce</span>
+            <h3 class="proj-name">MAISON</h3>
+            <p class="proj-desc" data-i18n="proj.desc3">Full e-commerce fashion store with EN/ES i18n system, functional cart drawer with qty management, product filters, hero slider, newsletter form, and checkout flow.</p>
+          </div>
+        </div>
+
+        <!-- Project 4 — HR Migration Case Study -->
+        <div class="proj-card reveal-up" style="--delay:0.3s">
+          <div class="proj-media proj-media-dark">
+            <div class="proj-case-study">
+              <div class="cs-icon">📊</div>
+              <p class="cs-label">Case Study</p>
+            </div>
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>IESS/SUT</span><span>Excel</span><span>Google Sheets</span><span>Process Design</span>
+              </div>
+              <div class="proj-links">
+                <a href="#contact" class="proj-link" data-i18n="proj.request">Request Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.hr">HR Operations</span>
+            <h3 class="proj-name" data-i18n="proj.name4">Payroll Migration</h3>
+            <p class="proj-desc" data-i18n="proj.desc4">Led a full payroll system migration at RUBASA — transferred 100% of employee records to IESS & SUT with zero errors, under tight deadline during a company-wide transition.</p>
+          </div>
+        </div>
+
+        <!-- Project 5 — IT Infrastructure -->
+        <div class="proj-card reveal-up" style="--delay:0.4s">
+          <div class="proj-media proj-media-dark">
+            <div class="proj-case-study">
+              <div class="cs-icon">🖥️</div>
+              <p class="cs-label">Case Study</p>
+            </div>
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>Windows OS</span><span>Hardware</span><span>Networking</span><span>Freshdesk</span>
+              </div>
+              <div class="proj-links">
+                <a href="#contact" class="proj-link" data-i18n="proj.request">Request Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.it">IT Infrastructure</span>
+            <h3 class="proj-name" data-i18n="proj.name5">30+ Workstations</h3>
+            <p class="proj-desc" data-i18n="proj.desc5">Independently managed preventive & corrective maintenance for 30+ workstations at QUIMPAC S.A. Standardized OS configurations and resolved Tier-1 support autonomously.</p>
+          </div>
+        </div>
+
+        <!-- Project 6 — This Portfolio -->
+        <div class="proj-card proj-card-featured reveal-up" style="--delay:0.5s">
+          <div class="proj-media">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Portfolio" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>HTML5</span><span>CSS Grid</span><span>JS</span><span>i18n</span><span>IntersectionObserver</span>
+              </div>
+              <div class="proj-links">
+                <a href="#home"  class="proj-link" data-i18n="proj.viewing">You're Here</a>
+                <a href="#contact" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.portfolio">Portfolio</span>
+            <h3 class="proj-name" data-i18n="proj.name6">This Portfolio</h3>
+            <p class="proj-desc" data-i18n="proj.desc6">Built from scratch — custom cursor, typing animation, floating tags, scroll reveal, bilingual i18n, contact form validation, and full mobile-first responsive layout. No frameworks.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CERTIFICATIONS STRIP
+  ═══════════════════════════════════════ -->
+  <section class="certs section">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <p class="sec-tag" data-i18n="certs.tag">Certifications</p>
+        <h2 class="sec-title" data-i18n="certs.title">Verified Credentials</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card reveal-up" style="--delay:0s">
+          <div class="cert-logo">IBM</div>
+          <div class="cert-info">
+            <h4 data-i18n="cert.net">Computer Networks & Network Security</h4>
+            <span>IBM / Coursera · Apr 2026</span>
+          </div>
+          <div class="cert-badge" data-i18n="cert.verified">Verified</div>
+        </div>
+        <div class="cert-card reveal-up" style="--delay:0.1s">
+          <div class="cert-logo">IBM</div>
+          <div class="cert-info">
+            <h4 data-i18n="cert.cyber1">Cybersecurity Tools & Cyberattacks</h4>
+            <span>IBM / Coursera · Apr 2026</span>
+          </div>
+          <div class="cert-badge" data-i18n="cert.verified">Verified</div>
+        </div>
+        <div class="cert-card reveal-up" style="--delay:0.2s">
+          <div class="cert-logo">IBM</div>
+          <div class="cert-info">
+            <h4 data-i18n="cert.cyber2">Cybersecurity Essentials</h4>
+            <span>IBM / Coursera · Apr 2026</span>
+          </div>
+          <div class="cert-badge" data-i18n="cert.verified">Verified</div>
+        </div>
+        <div class="cert-card reveal-up" style="--delay:0.3s">
+          <div class="cert-logo">IBM</div>
+          <div class="cert-info">
+            <h4 data-i18n="cert.os">OS Overview, Administration & Security</h4>
+            <span>IBM / Coursera · Apr 2026</span>
+          </div>
+          <div class="cert-badge" data-i18n="cert.verified">Verified</div>
+        </div>
+        <div class="cert-card reveal-up" style="--delay:0.4s">
+          <div class="cert-logo">CAM</div>
+          <div class="cert-info">
+            <h4 data-i18n="cert.cambridge">Cambridge English B2</h4>
+            <span>Cambridge University Press</span>
+          </div>
+          <div class="cert-badge" data-i18n="cert.verified">Verified</div>
+        </div>
+        <div class="cert-card reveal-up" style="--delay:0.5s">
+          <div class="cert-logo">IBM</div>
+          <div class="cert-info">
+            <h4 data-i18n="cert.careers">Cybersecurity Careers</h4>
+            <span>IBM / Coursera · Apr 2026</span>
+          </div>
+          <div class="cert-badge" data-i18n="cert.verified">Verified</div>
+        </div>
+        <div class="cert-card reveal-up" style="--delay:0.6s">
+          <div class="cert-logo">Google</div>
+          <div class="cert-info">
+            <h4 data-i18n="cert.google">Google IT Support Professional</h4>
+            <span>Google / Coursera · Apr 2026</span>
+          </div>
+          <div class="cert-badge" data-i18n="cert.verified">Verified</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info reveal-left">
+          <p class="sec-tag" data-i18n="contact.tag">Get In Touch</p>
+          <h2 class="sec-title" data-i18n="contact.title">Let's build<br /><em>something real</em></h2>
+          <p class="contact-desc" data-i18n="contact.desc">
+            Available for freelance projects, remote positions, and long-term collaborations. Response within 24 hours — guaranteed.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:alejorendon2712@gmail.com" class="c-link">
+              <span class="c-link-icon">✉</span>
+              <div>
+                <span class="c-link-label" data-i18n="contact.emailLabel">Email</span>
+                <span class="c-link-val">alejorendon2712@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/593986456791" target="_blank" rel="noopener" class="c-link">
+              <span class="c-link-icon">📞</span>
+              <div>
+                <span class="c-link-label" data-i18n="contact.phoneLabel">Phone / WhatsApp</span>
+                <span class="c-link-val">+593 986 456 791</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/jostin-alejandro-rendón-lozano-749803386" target="_blank" rel="noopener" class="c-link">
+              <span class="c-link-icon">in</span>
+              <div>
+                <span class="c-link-label">LinkedIn</span>
+                <span class="c-link-val">Jostin Rendon</span>
+              </div>
+            </a>
+            <a href="https://github.com/JostinRendonL" target="_blank" rel="noopener" class="c-link">
+              <span class="c-link-icon">⌥</span>
+              <div>
+                <span class="c-link-label">GitHub</span>
+                <span class="c-link-val">JostinRendonL</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="availability-badge">
+            <span class="avail-dot"></span>
+            <span data-i18n="contact.available">Available for new projects</span>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname" data-i18n="form.name">Name</label>
+                <input type="text" id="fname" name="name" data-i18n-placeholder="form.namePh" placeholder="Your full name" required />
+                <span class="form-error" id="nameErr" data-i18n="form.nameErr">Please enter your name.</span>
+              </div>
+              <div class="form-group">
+                <label for="femail" data-i18n="form.email">Email</label>
+                <input type="email" id="femail" name="email" data-i18n-placeholder="form.emailPh" placeholder="your@email.com" required />
+                <span class="form-error" id="emailErr" data-i18n="form.emailErr">Please enter a valid email.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="fsubject" data-i18n="form.subject">Subject</label>
+              <select id="fsubject" name="title" required>
+                <option value="" disabled selected data-i18n="form.subjectPlaceholder">Select a subject</option>
+                <option value="web" data-i18n="form.opt.web">Web Development Project</option>
+                <option value="it" data-i18n="form.opt.it">IT Support</option>
+                <option value="va" data-i18n="form.opt.va">Virtual Assistant</option>
+                <option value="freelance" data-i18n="form.opt.freelance">Freelance Collaboration</option>
+                <option value="other" data-i18n="form.opt.other">Other</option>
+              </select>
+              <span class="form-error" id="subjectErr" data-i18n="form.subjectErr">Please select a subject.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="fmessage" data-i18n="form.message">Message</label>
+              <textarea id="fmessage" name="message" rows="5" data-i18n-placeholder="form.messagePh" placeholder="Tell me about your project or opportunity..." required></textarea>
+              <span class="form-error" id="msgErr" data-i18n="form.msgErr">Please enter a message.</span>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+              <span data-i18n="form.send">Send Message</span>
+              <span class="btn-arrow">→</span>
+            </button>
+
+            <div class="form-success" id="formSuccess">
+              <span>✓</span>
+              <p data-i18n="form.success">Message sent! I'll get back to you within 24 hours.</p>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-logo">
+            <span class="logo-bracket">[</span>JR<span class="logo-bracket">]</span>
+          </span>
+          <p data-i18n="footer.tagline">Built from scratch. No templates. No frameworks.</p>
+        </div>
+        <div class="footer-right">
+          <p class="footer-copy" data-i18n="footer.copy">© 2026 Jostin Rendón. All rights reserved.</p>
+          <p class="footer-made" data-i18n="footer.made">Designed & coded with intention.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
