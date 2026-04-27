@@ -2,9 +2,10 @@
   <strong style="font-size:2rem;">[JR]</strong>
 </p>
 
-<h1 align="center">Jostin Rendón — Portfolio Personal</h1>
+<h1 align="center">Jostin Rendón — Personal Portfolio / Portafolio Personal</h1>
 
 <p align="center">
+  <em>Web Developer · IT Support · AI Automation Specialist</em><br/>
   <em>Desarrollador Web · Soporte TI · Especialista en Automatización con IA</em>
 </p>
 
@@ -21,89 +22,101 @@
 
 ---
 
-## 📸 Vista Previa
+## 📸 Preview / Vista Previa
 
 <p align="center">
-  <img src="./preview.png" alt="Captura del portfolio" width="800" />
+  <img src="./preview.png" alt="Portfolio Screenshot / Captura del portafolio" width="800" />
 </p>
 
 ---
 
-## 📖 Descripción del Proyecto
+## 📖 About the Project / Descripción del Proyecto
 
-Portfolio profesional de **Jostin Rendón**, estudiante de Ingeniería en Sistemas en la Universidad de Guayaquil (Ecuador). Diseñado para presentar proyectos reales, experiencia profesional, habilidades técnicas y certificaciones verificadas.
+**🇺🇸 English**
 
-El sitio fue **construido completamente desde cero** — sin frameworks de UI, sin templates, sin Bootstrap — usando únicamente HTML5, CSS3 y JavaScript vanilla. Prioriza rendimiento, accesibilidad, diseño moderno y una experiencia de usuario fluida en todos los dispositivos.
+Professional portfolio of **Jostin Rendón**, Systems Engineering student at the University of Guayaquil (Ecuador). Designed to showcase real projects, professional experience, technical skills, and verified certifications.
 
-### 🎯 Objetivo
+Built **entirely from scratch** — no UI frameworks, no templates, no Bootstrap — using only HTML5, CSS3, and vanilla JavaScript. Prioritizes performance, accessibility, modern design, and a seamless user experience across all devices.
 
-Servir como carta de presentación digital para oportunidades de trabajo remoto, freelance y colaboraciones profesionales, demostrando capacidad técnica real a través del propio diseño y código del portafolio.
+**🇪🇨 Español**
 
----
+Portafolio profesional de **Jostin Rendón**, estudiante de Ingeniería en Sistemas en la Universidad de Guayaquil (Ecuador). Diseñado para presentar proyectos reales, experiencia profesional, habilidades técnicas y certificaciones verificadas.
 
-## ✨ Características Principales
+Construido **completamente desde cero** — sin frameworks de UI, sin plantillas, sin Bootstrap — usando únicamente HTML5, CSS3 y JavaScript vanilla. Prioriza rendimiento, accesibilidad, diseño moderno y una experiencia de usuario fluida en todos los dispositivos.
 
-| Característica | Descripción |
-|---|---|
-| 🌍 **i18n Bilingüe** | Sistema de internacionalización completo EN/ES sin recarga de página. Persistido en `localStorage`. |
-| 📱 **Mobile-First** | Diseño responsivo optimizado para móvil, tablet y escritorio con breakpoints en 480px, 600px, 700px, 768px, 900px, 1024px y 1100px. |
-| ✍️ **Efecto Typewriter** | Animación de texto que cicla entre frases de rol profesional, adaptándose al idioma activo. |
-| 🖱️ **Cursor Personalizado** | Cursor dual (punto + seguidor) con estados de hover magnéticos en elementos interactivos. Se desactiva automáticamente en dispositivos táctiles. |
-| 📜 **Scroll Reveal** | Animaciones de entrada (up, left, right) activadas por `IntersectionObserver` con retardo escalonado configurable por CSS `--delay`. |
-| 🏷️ **Etiquetas Flotantes** | Tags de tecnología con animación antigravitacional flotante en la sección hero. |
-| ✉️ **Formulario de Contacto** | Validación en tiempo real, honeypot anti-spam, sanitización de inputs y envío automático de emails vía **EmailJS**. |
-| 🔒 **Cabeceras de Seguridad** | CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy y Permissions-Policy configurados en `vercel.json`. |
-| 🎨 **Cargador de Página** | Animación de entrada con barra de progreso y revelación escalonada del hero. |
-| ⬆️ **Back to Top** | Botón flotante que aparece al hacer scroll, con transición suave. |
-| 🍔 **Menú Hamburguesa** | Overlay de navegación en dispositivos móviles con cierre por Escape, clic en enlace o toggle. |
-| 📊 **Timeline de Experiencia** | Línea temporal interactiva que muestra experiencia laboral, educación y certificaciones con indicadores visuales por tipo. |
-| 🏅 **Grid de Certificaciones** | Tarjetas de credenciales verificadas (IBM, Google, Cambridge) con estado visual. |
+### 🎯 Goal / Objetivo
+
+> **🇺🇸** Serve as a digital business card for remote work, freelance, and professional collaborations — demonstrating real technical capability through the portfolio's own design and code.
+>
+> **🇪🇨** Servir como carta de presentación digital para trabajo remoto, freelance y colaboraciones profesionales — demostrando capacidad técnica real a través del propio diseño y código del portafolio.
 
 ---
 
-## 🛠️ Stack Tecnológico
+## ✨ Key Features / Características Principales
+
+| Feature / Característica | 🇺🇸 English | 🇪🇨 Español |
+|---|---|---|
+| 🌍 **Bilingual i18n** | Full EN/ES internationalization system without page reload. Persisted in `localStorage`. | Sistema de internacionalización completo EN/ES sin recarga de página. Persistido en `localStorage`. |
+| 📱 **Mobile-First** | Responsive design optimized for mobile, tablet, and desktop with breakpoints at 480px, 600px, 700px, 768px, 900px, 1024px, and 1100px. | Diseño responsivo optimizado para móvil, tablet y escritorio con breakpoints en 480px, 600px, 700px, 768px, 900px, 1024px y 1100px. |
+| ✍️ **Typewriter Effect** | Typing animation cycling through professional role phrases, adapting to the active language. | Animación de texto que cicla entre frases de rol profesional, adaptándose al idioma activo. |
+| 🖱️ **Custom Cursor** | Dual cursor (dot + follower) with magnetic hover states on interactive elements. Auto-disabled on touch devices. | Cursor dual (punto + seguidor) con estados de hover magnéticos en elementos interactivos. Se desactiva en dispositivos táctiles. |
+| 📜 **Scroll Reveal** | Entry animations (up, left, right) triggered by `IntersectionObserver` with configurable stagger delay via CSS `--delay`. | Animaciones de entrada activadas por `IntersectionObserver` con retardo escalonado configurable por CSS `--delay`. |
+| 🏷️ **Floating Tags** | Anti-gravity floating tech tags in the hero section. | Etiquetas de tecnología con animación flotante en la sección hero. |
+| ✉️ **Contact Form** | Real-time validation, anti-spam honeypot, input sanitization, and automatic email sending via **EmailJS**. | Validación en tiempo real, honeypot anti-spam, sanitización de inputs y envío automático de emails vía **EmailJS**. |
+| 🔒 **Security Headers** | CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy configured in `vercel.json`. | CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy y Permissions-Policy configurados en `vercel.json`. |
+| 🎨 **Page Loader** | Entry animation with progress bar and staggered hero reveal. | Animación de entrada con barra de progreso y revelación escalonada del hero. |
+| ⬆️ **Back to Top** | Floating button that appears on scroll with smooth transition. | Botón flotante que aparece al hacer scroll con transición suave. |
+| 🍔 **Hamburger Menu** | Mobile navigation overlay with close on Escape, link click, or toggle. | Overlay de navegación móvil con cierre por Escape, clic en enlace o toggle. |
+| 📊 **Experience Timeline** | Interactive timeline showing work experience, education, and certifications with visual type indicators. | Línea temporal interactiva con experiencia laboral, educación y certificaciones con indicadores visuales por tipo. |
+| 🏅 **Certifications Grid** | Verified credential cards (IBM, Google, Cambridge) with visual status. | Tarjetas de credenciales verificadas (IBM, Google, Cambridge) con estado visual. |
+
+---
+
+## 🛠️ Tech Stack / Stack Tecnológico
 
 ### Core
 
-| Tecnología | Uso |
+| Technology / Tecnología | Usage / Uso |
 |---|---|
-| **HTML5** | Marcado semántico y accesible (`<section>`, `<nav>`, `<header>`, `<footer>`, `aria-*`) |
-| **CSS3** | Variables CSS (Custom Properties), Grid, Flexbox, `clamp()`, `aspect-ratio`, animaciones `@keyframes`, media queries mobile-first |
-| **JavaScript ES6+** | Módulos ES6 (`import`/`export`), `IntersectionObserver`, `async`/`await`, DOM API, `localStorage`, `requestAnimationFrame` |
+| **HTML5** | Semantic & accessible markup (`<section>`, `<nav>`, `<header>`, `<footer>`, `aria-*`) |
+| **CSS3** | CSS Variables (Custom Properties), Grid, Flexbox, `clamp()`, `aspect-ratio`, `@keyframes` animations, mobile-first media queries |
+| **JavaScript ES6+** | ES6 Modules (`import`/`export`), `IntersectionObserver`, `async`/`await`, DOM API, `localStorage`, `requestAnimationFrame` |
 
-### Servicios & Herramientas
+### Services & Tools / Servicios y Herramientas
 
-| Servicio | Propósito |
+| Service / Servicio | Purpose / Propósito |
 |---|---|
-| **[EmailJS](https://www.emailjs.com/)** | Envío de formulario de contacto sin backend — SDK v4 vía CDN |
-| **[Google Fonts](https://fonts.google.com/)** | Tipografía: **Syne** (encabezados) + **DM Sans** (cuerpo) |
-| **[Unsplash](https://unsplash.com/)** | Imágenes de alta resolución para proyectos y hero |
-| **[Vercel](https://vercel.com/)** | Hosting con CI/CD automático y cabeceras de seguridad |
+| **[EmailJS](https://www.emailjs.com/)** | Contact form submission without backend — SDK v4 via CDN / Envío de formulario sin backend |
+| **[Google Fonts](https://fonts.google.com/)** | Typography / Tipografía: **Syne** (headings / encabezados) + **DM Sans** (body / cuerpo) |
+| **[Unsplash](https://unsplash.com/)** | High-resolution images for projects / Imágenes de alta resolución para proyectos |
+| **[Vercel](https://vercel.com/)** | Hosting with automatic CI/CD & security headers / Hosting con CI/CD automático y cabeceras de seguridad |
 
 ---
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure / Estructura del Proyecto
 
 ```
 📦 port/
-├── 📄 index.html              # Estructura HTML completa del portafolio
-├── 📄 style.css                # Estilos globales (1241 líneas) — Mobile-first
-├── 📄 script.js                # Script monolítico legacy (709 líneas)
-├── 📂 src/                     # Arquitectura modular ES6
-│   ├── 📄 main.js              # Orquestador — importa e inicializa todos los módulos
-│   ├── 📄 i18n.js              # Sistema de internacionalización + efecto typing
-│   └── 📄 formHandler.js       # Validación, sanitización, honeypot y EmailJS
-├── 📄 vercel.json              # Cabeceras de seguridad HTTP para producción
-├── 📄 .env.example             # Variables de entorno documentadas (EmailJS)
-├── 📄 Me.png                   # Fotografía personal para la sección About
-├── 📄 Resume Jostin Rendon.pdf # CV descargable
-├── 📄 preview.png              # Captura de pantalla del portafolio
-└── 📄 README.md                # Este archivo
+├── 📄 index.html              # Full portfolio HTML structure / Estructura HTML completa
+├── 📄 style.css                # Global styles (1241 lines) — Mobile-first / Estilos globales
+├── 📄 script.js                # Legacy monolithic script (709 lines) / Script monolítico legacy
+├── 📂 src/                     # Modular ES6 architecture / Arquitectura modular ES6
+│   ├── 📄 main.js              # Orchestrator — imports & initializes all modules / Orquestador
+│   ├── 📄 i18n.js              # Internationalization system + typing effect / Sistema i18n
+│   └── 📄 formHandler.js       # Validation, sanitization, honeypot & EmailJS / Validación y EmailJS
+├── 📄 vercel.json              # HTTP security headers for production / Cabeceras de seguridad
+├── 📄 .env.example             # Documented environment variables (EmailJS) / Variables de entorno
+├── 📄 Me.png                   # Personal photo for About section / Foto personal
+├── 📄 Resume Jostin Rendon.pdf # Downloadable CV / CV descargable
+├── 📄 preview.png              # Portfolio screenshot / Captura de pantalla
+└── 📄 README.md                # This file / Este archivo
 ```
 
-### Arquitectura Modular (`src/`)
+### Modular Architecture / Arquitectura Modular (`src/`)
 
-El proyecto fue refactorizado de un script monolítico (`script.js`) a una arquitectura modular con ES6 modules:
+> **🇺🇸** The project was refactored from a monolithic script (`script.js`) to a modular architecture using ES6 modules.
+>
+> **🇪🇨** El proyecto fue refactorizado de un script monolítico (`script.js`) a una arquitectura modular con ES6 modules.
 
 ```mermaid
 graph TD
@@ -116,193 +129,201 @@ graph TD
     A -->|link| G[Google Fonts]
 ```
 
-| Módulo | Responsabilidad |
+| Module / Módulo | Responsibility / Responsabilidad |
 |---|---|
-| **`main.js`** | Punto de entrada. Importa todos los módulos y ejecuta la inicialización en `DOMContentLoaded`. Orquesta: Loader, Cursor, Navbar, Mobile Menu, Scroll Reveal, Back to Top y Smooth Scroll. |
-| **`i18n.js`** | Diccionario completo EN/ES (~125 claves por idioma), typing words, funciones `applyLang()`, `switchLang()`, `initLang()`, `initTyping()` y estado de idioma persistido en `localStorage`. |
-| **`formHandler.js`** | Inicialización de EmailJS, validación de campos, sanitización HTML (`<tag>` stripping), honeypot anti-bot, estados de loading/success/error y feedback visual. |
+| **`main.js`** | Entry point. Imports all modules and runs initialization on `DOMContentLoaded`. Orchestrates: Loader, Cursor, Navbar, Mobile Menu, Scroll Reveal, Back to Top, and Smooth Scroll. / Punto de entrada. Importa todos los módulos e inicializa en `DOMContentLoaded`. |
+| **`i18n.js`** | Full EN/ES dictionary (~125 keys per language), typing words, `applyLang()`, `switchLang()`, `initLang()`, `initTyping()`, and language state persisted in `localStorage`. / Diccionario completo EN/ES, palabras del typing y estado de idioma persistido. |
+| **`formHandler.js`** | EmailJS initialization, field validation, HTML sanitization (`<tag>` stripping), anti-bot honeypot, loading/success/error states, and visual feedback. / Inicialización de EmailJS, validación, sanitización, honeypot anti-bot y feedback visual. |
 
 ---
 
-## 🌐 Sistema i18n (Internacionalización)
+## 🌐 i18n System / Sistema de Internacionalización
 
-El sistema de traducción funciona sin librerías externas:
+> **🇺🇸** The translation system works without external libraries.
+>
+> **🇪🇨** El sistema de traducción funciona sin librerías externas.
 
-1. **Marcado HTML**: Los elementos traducibles usan atributos `data-i18n` y `data-i18n-placeholder`:
+1. **HTML Markup / Marcado HTML**: Translatable elements use `data-i18n` and `data-i18n-placeholder` attributes:
    ```html
    <h2 data-i18n="about.title">More than a student</h2>
    <input data-i18n-placeholder="form.namePh" placeholder="Your full name" />
    ```
 
-2. **Diccionario JS**: Objeto `i18n` con claves `en` y `es`, cada una conteniendo ~125 traducciones.
+2. **JS Dictionary / Diccionario JS**: `i18n` object with `en` and `es` keys, each containing ~125 translations / traducciones.
 
-3. **Aplicación**: `applyLang()` recorre el DOM y actualiza `innerHTML` / `placeholder` sin recarga.
+3. **Application / Aplicación**: `applyLang()` traverses the DOM and updates `innerHTML` / `placeholder` without reload / sin recarga.
 
-4. **Persistencia**: El idioma seleccionado se guarda en `localStorage` bajo la clave `jr-lang`.
+4. **Persistence / Persistencia**: Selected language saved to `localStorage` under `jr-lang` key / Idioma guardado en `localStorage`.
 
-5. **Toggle**: Clic en el selector `EN / ES` de la navbar o del menú móvil alterna entre idiomas.
+5. **Toggle**: Click the `EN / ES` selector in the navbar or mobile menu to switch languages / Clic en el selector para cambiar idioma.
 
-6. **Typing Dinámico**: Las frases del efecto typewriter cambian según el idioma activo.
-
----
-
-## 🔒 Seguridad
-
-El archivo `vercel.json` configura las siguientes cabeceras de seguridad HTTP en producción:
-
-| Cabecera | Valor | Propósito |
-|---|---|---|
-| `Content-Security-Policy` | `default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; ...` | Previene XSS, inyección de scripts y carga de recursos no autorizados |
-| `Strict-Transport-Security` | `max-age=63072000; includeSubDomains; preload` | Fuerza HTTPS durante 2 años |
-| `X-Frame-Options` | `DENY` | Previene clickjacking (iframe embedding) |
-| `X-Content-Type-Options` | `nosniff` | Previene MIME-type sniffing |
-| `Referrer-Policy` | `strict-origin-when-cross-origin` | Controla información de referencia en peticiones |
-| `Permissions-Policy` | `camera=(), microphone=(), geolocation=()` | Deshabilita acceso a cámara, micrófono y geolocalización |
-
-### Protecciones Adicionales en el Formulario
-
-- **Honeypot anti-spam**: Campo oculto (`name="_honey"`) que los bots completan y los usuarios reales no ven. Si se detecta valor, el envío se descarta silenciosamente.
-- **Sanitización de inputs**: La función `sanitize()` elimina tags HTML y recorta espacios antes de la validación.
-- **Validación con regex**: Expresión regular para validación de formato de email.
+6. **Dynamic Typing / Typing Dinámico**: Typewriter phrases change based on the active language / Las frases cambian según el idioma activo.
 
 ---
 
-## 🎨 Sistema de Diseño
+## 🔒 Security / Seguridad
 
-### Paleta de Colores
+> **🇺🇸** The `vercel.json` file configures the following HTTP security headers in production.
+>
+> **🇪🇨** El archivo `vercel.json` configura las siguientes cabeceras de seguridad HTTP en producción.
 
-| Token CSS | Color | Uso |
+| Header / Cabecera | Value / Valor | Purpose / Propósito |
 |---|---|---|
-| `--bg` | `#0A0A0A` | Fondo principal |
-| `--bg-2` | `#111111` | Fondo de secciones alternas |
-| `--bg-3` | `#171717` | Fondo de tarjetas |
-| `--surface` | `#1C1C1E` | Superficies de inputs y chips |
-| `--accent` | `#007AFF` | Color de acento (Electric Blue) |
-| `--white` | `#FAFAF8` | Texto principal |
-| `--gray-2` | `#A8A8A4` | Texto secundario |
-| `--gray-3` | `#606060` | Texto terciario / labels |
+| `Content-Security-Policy` | `default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; ...` | Prevents XSS & unauthorized resource loading / Previene XSS y carga de recursos no autorizados |
+| `Strict-Transport-Security` | `max-age=63072000; includeSubDomains; preload` | Forces HTTPS for 2 years / Fuerza HTTPS por 2 años |
+| `X-Frame-Options` | `DENY` | Prevents clickjacking (iframe embedding) / Previene clickjacking |
+| `X-Content-Type-Options` | `nosniff` | Prevents MIME-type sniffing / Previene MIME-type sniffing |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` | Controls referrer information in requests / Controla información de referencia |
+| `Permissions-Policy` | `camera=(), microphone=(), geolocation=()` | Disables camera, microphone & geolocation access / Deshabilita acceso a cámara, micrófono y geolocalización |
 
-### Tipografía
+### Form Protections / Protecciones del Formulario
 
-| Fuente | Uso | Pesos |
+- 🛡️ **Anti-spam honeypot**: Hidden field (`name="_honey"`) that bots fill and real users don't see. Silently discarded if detected. / Campo oculto que los bots completan. Se descarta silenciosamente.
+- 🧹 **Input sanitization / Sanitización**: `sanitize()` function strips HTML tags and trims whitespace before validation. / Elimina tags HTML y recorta espacios.
+- ✅ **Regex validation / Validación**: Regular expression for email format validation. / Expresión regular para validar formato de email.
+
+---
+
+## 🎨 Design System / Sistema de Diseño
+
+### Color Palette / Paleta de Colores
+
+| CSS Token | Color | Usage / Uso |
 |---|---|---|
-| **Syne** | Encabezados, logo, títulos | 400–800 |
-| **DM Sans** | Cuerpo, párrafos, botones | 300–500 |
+| `--bg` | `#0A0A0A` | Primary background / Fondo principal |
+| `--bg-2` | `#111111` | Alternate section background / Fondo de secciones alternas |
+| `--bg-3` | `#171717` | Card background / Fondo de tarjetas |
+| `--surface` | `#1C1C1E` | Input & chip surfaces / Superficies de inputs y chips |
+| `--accent` | `#007AFF` | Accent color (Electric Blue) / Color de acento |
+| `--white` | `#FAFAF8` | Primary text / Texto principal |
+| `--gray-2` | `#A8A8A4` | Secondary text / Texto secundario |
+| `--gray-3` | `#606060` | Tertiary text & labels / Texto terciario |
 
-### Escala de Espaciado
+### Typography / Tipografía
+
+| Font / Fuente | Usage / Uso | Weights / Pesos |
+|---|---|---|
+| **Syne** | Headings, logo, titles / Encabezados, logo, títulos | 400–800 |
+| **DM Sans** | Body, paragraphs, buttons / Cuerpo, párrafos, botones | 300–500 |
+
+### Spacing Scale / Escala de Espaciado
 
 ```
 --space-xs:  0.5rem  (8px)
 --space-sm:  1rem    (16px)
 --space-md:  2rem    (32px)
 --space-lg:  4rem    (64px)
---space-xl:  8rem    (128px) — reducido a 5rem en mobile
+--space-xl:  8rem    (128px) — reduced to 5rem on mobile / reducido a 5rem en mobile
 ```
 
-### Animaciones
+### Animations / Animaciones
 
-| Animación | Descripción | Duración |
+| Animation / Animación | Description / Descripción | Duration / Duración |
 |---|---|---|
-| `loadFill` | Barra de progreso del loader | 1.8s |
-| `floatDrift` | Etiquetas flotantes del hero | 6s (loop) |
-| `pulse` | Punto de disponibilidad pulsante | 2s (loop) |
-| `blink` | Cursor de la animación typing | 1s (loop) |
-| `scrollBob` / `scrollGrow` | Indicador de scroll | 2.5s (loop) |
-| Scroll Reveal | `reveal-up`, `reveal-left`, `reveal-right` | 0.7s con delay CSS |
+| `loadFill` | Loader progress bar / Barra de progreso | 1.8s |
+| `floatDrift` | Hero floating tags / Etiquetas flotantes | 6s (loop) |
+| `pulse` | Availability dot pulse / Punto de disponibilidad | 2s (loop) |
+| `blink` | Typing cursor / Cursor del typing | 1s (loop) |
+| `scrollBob` / `scrollGrow` | Scroll indicator / Indicador de scroll | 2.5s (loop) |
+| Scroll Reveal | `reveal-up`, `reveal-left`, `reveal-right` | 0.7s + CSS delay |
 
 ---
 
-## 🚀 Despliegue
+## 🚀 Deployment / Despliegue
 
-### Producción (Vercel)
+### Production / Producción (Vercel)
 
-El portafolio se despliega automáticamente en **Vercel**. Cada push a la rama principal genera un nuevo build:
+> **🇺🇸** The portfolio is automatically deployed on **Vercel**. Every push to the main branch triggers a new build.
+>
+> **🇪🇨** El portafolio se despliega automáticamente en **Vercel**. Cada push a la rama principal genera un nuevo build.
 
 🔗 **[https://jr-portfolio-theta.vercel.app/](https://jr-portfolio-theta.vercel.app/)**
 
-### Desarrollo Local
+### Local Development / Desarrollo Local
 
-1. **Clonar el repositorio:**
+1. **Clone the repo / Clonar el repositorio:**
    ```bash
    git clone https://github.com/JostinRendonL/portfolio.git
    cd portfolio
    ```
 
-2. **Servir localmente** (se necesita un servidor local por los ES6 modules):
+2. **Serve locally / Servir localmente** (required for ES6 modules / necesario por los ES6 modules):
    ```bash
-   # Opción 1: Live Server (VS Code Extension)
-   # Opción 2: Python
+   # Option 1 / Opción 1: Live Server (VS Code Extension)
+   # Option 2 / Opción 2: Python
    python -m http.server 8080
 
-   # Opción 3: npx
+   # Option 3 / Opción 3: npx
    npx serve .
    ```
 
-3. **Abrir en el navegador:**
+3. **Open in browser / Abrir en el navegador:**
    ```
    http://localhost:8080
    ```
 
-> **Nota:** No se requiere `npm install` ni build step — el proyecto es 100% estático.
+> **Note / Nota:** No `npm install` or build step required — the project is 100% static. / No se requiere `npm install` ni build step — el proyecto es 100% estático.
 
-### Configuración de EmailJS
+### EmailJS Setup / Configuración de EmailJS
 
-Para que el formulario de contacto funcione, necesitas configurar tus propias credenciales de EmailJS:
+> **🇺🇸** To make the contact form work, you need to configure your own EmailJS credentials.
+>
+> **🇪🇨** Para que el formulario funcione, necesitas configurar tus propias credenciales de EmailJS.
 
-1. Crea una cuenta en [emailjs.com](https://www.emailjs.com/)
-2. Configura un servicio de email y una plantilla
-3. Actualiza las constantes en `src/formHandler.js`:
+1. Create an account at / Crea una cuenta en [emailjs.com](https://www.emailjs.com/)
+2. Set up an email service and template / Configura un servicio de email y una plantilla
+3. Update the constants in / Actualiza las constantes en `src/formHandler.js`:
    ```javascript
-   const EMAILJS_PUBLIC_KEY  = 'tu_public_key';
-   const EMAILJS_SERVICE_ID  = 'tu_service_id';
-   const EMAILJS_TEMPLATE_ID = 'tu_template_id';
+   const EMAILJS_PUBLIC_KEY  = 'your_public_key';
+   const EMAILJS_SERVICE_ID  = 'your_service_id';
+   const EMAILJS_TEMPLATE_ID = 'your_template_id';
    ```
-4. Consulta `.env.example` para referencia de las variables.
+4. See / Consulta `.env.example` for reference / como referencia.
 
 ---
 
-## 📋 Secciones del Portafolio
+## 📋 Portfolio Sections / Secciones del Portafolio
 
-| # | Sección | ID HTML | Descripción |
+| # | Section / Sección | HTML ID | Description / Descripción |
 |---|---|---|---|
-| 1 | **Hero** | `#home` | Nombre, rol dinámico (typing), CTAs, estadísticas clave y etiquetas flotantes |
-| 2 | **About** | `#about` | Fotografía, biografía profesional, chips de habilidades y descarga de CV |
-| 3 | **Skills** | `#skills` | Grid de 6 categorías: Web Dev, IT Support, Cybersecurity, Admin, AI/Automation, Languages |
-| 4 | **Experience** | `#experience` | Timeline con 3 experiencias laborales, 1 educación y 1 bloque de certificaciones |
-| 5 | **Projects** | `#projects` | Grid de 6 proyectos: 3 web (live demos), 2 case studies, 1 este portafolio |
-| 6 | **Certifications** | — | 7 certificaciones verificadas (5 IBM, 1 Google, 1 Cambridge) |
-| 7 | **Contact** | `#contact` | Info de contacto (Email, WhatsApp, LinkedIn, GitHub) + formulario funcional |
+| 1 | **Hero** | `#home` | Name, dynamic role (typing), CTAs, key stats, floating tags / Nombre, rol dinámico, CTAs, estadísticas y etiquetas flotantes |
+| 2 | **About** | `#about` | Photo, professional bio, skill chips, CV download / Foto, biografía, chips de habilidades y descarga de CV |
+| 3 | **Skills** | `#skills` | 6-category grid: Web Dev, IT Support, Cybersecurity, Admin, AI/Automation, Languages / Grid de 6 categorías |
+| 4 | **Experience** | `#experience` | Timeline: 3 work experiences, 1 education, 1 certifications block / Timeline con experiencias y certificaciones |
+| 5 | **Projects** | `#projects` | 6-project grid: 3 web (live demos), 2 case studies, 1 this portfolio / Grid de 6 proyectos |
+| 6 | **Certifications** | — | 7 verified credentials (5 IBM, 1 Google, 1 Cambridge) / 7 certificaciones verificadas |
+| 7 | **Contact** | `#contact` | Contact info (Email, WhatsApp, LinkedIn, GitHub) + functional form / Info de contacto + formulario |
 
 ---
 
-## 📂 Proyectos Destacados
+## 📂 Featured Projects / Proyectos Destacados
 
-| Proyecto | Tipo | Stack | Demo |
+| Project / Proyecto | Type / Tipo | Stack | Live Demo |
 |---|---|---|---|
-| **La Cueva** | Restaurante | HTML5, CSS3, JS, Unsplash | [restaurante-iota-liart.vercel.app](https://restaurante-iota-liart.vercel.app/) |
-| **Blade & Co.** | Barbería Premium | HTML5, CSS3, JS, CSS Animations | [bladeco.vercel.app](https://bladeco.vercel.app/) |
+| **La Cueva** | Restaurant / Restaurante | HTML5, CSS3, JS, Unsplash | [restaurante-iota-liart.vercel.app](https://restaurante-iota-liart.vercel.app/) |
+| **Blade & Co.** | Premium Barbershop / Barbería | HTML5, CSS3, JS, CSS Animations | [bladeco.vercel.app](https://bladeco.vercel.app/) |
 | **MAISON** | E-Commerce Fashion | HTML5, CSS3, JS (i18n), Cart System | [nova-beta-navy.vercel.app](https://nova-beta-navy.vercel.app/) |
-| **Migración de Nómina** | Case Study (RRHH) | IESS/SUT, Excel, Google Sheets | — |
-| **30+ Estaciones** | Case Study (IT) | Windows, Hardware, Freshdesk | — |
-| **Este Portafolio** | Portfolio Personal | HTML5, CSS Grid, JS, i18n, IntersectionObserver | [jr-portfolio-theta.vercel.app](https://jr-portfolio-theta.vercel.app/) |
+| **Payroll Migration / Migración de Nómina** | Case Study (HR / RRHH) | IESS/SUT, Excel, Google Sheets | — |
+| **30+ Workstations / Estaciones** | Case Study (IT) | Windows, Hardware, Freshdesk | — |
+| **This Portfolio / Este Portafolio** | Personal Portfolio | HTML5, CSS Grid, JS, i18n, IntersectionObserver | [jr-portfolio-theta.vercel.app](https://jr-portfolio-theta.vercel.app/) |
 
 ---
 
-## 🏅 Certificaciones
+## 🏅 Certifications / Certificaciones
 
-- 🔵 **IBM** — Computer Networks & Network Security (Coursera, 2026)
-- 🔵 **IBM** — Cybersecurity Tools & Cyberattacks (Coursera, 2026)
-- 🔵 **IBM** — Cybersecurity Essentials (Coursera, 2026)
-- 🔵 **IBM** — OS Overview, Administration & Security (Coursera, 2026)
-- 🔵 **IBM** — Cybersecurity Careers (Coursera, 2026)
-- 🟢 **Google** — IT Support Professional (Coursera, 2026)
-- 🟣 **Cambridge** — English B2
+- 🔵 **IBM** — Computer Networks & Network Security / Redes y Seguridad de Red (Coursera, 2026)
+- 🔵 **IBM** — Cybersecurity Tools & Cyberattacks / Herramientas y Ciberataques (Coursera, 2026)
+- 🔵 **IBM** — Cybersecurity Essentials / Fundamentos de Ciberseguridad (Coursera, 2026)
+- 🔵 **IBM** — OS Overview, Administration & Security / Sistemas Operativos: Admin y Seguridad (Coursera, 2026)
+- 🔵 **IBM** — Cybersecurity Careers / Carreras en Ciberseguridad (Coursera, 2026)
+- 🟢 **Google** — IT Support Professional / Profesional de Soporte TI (Coursera, 2026)
+- 🟣 **Cambridge** — English B2 / Inglés B2
 
 ---
 
-## 🤝 Contacto
+## 🤝 Contact / Contacto
 
-| Canal | Enlace |
+| Channel / Canal | Link / Enlace |
 |---|---|
 | 📧 **Email** | [alejorendon2712@gmail.com](mailto:alejorendon2712@gmail.com) |
 | 📱 **WhatsApp** | [+593 986 456 791](https://wa.me/593986456791) |
@@ -311,12 +332,13 @@ Para que el formulario de contacto funcione, necesitas configurar tus propias cr
 
 ---
 
-## 📄 Licencia
+## 📄 License / Licencia
 
-© 2026 Jostin Rendón. Todos los derechos reservados.
+© 2026 Jostin Rendón. All rights reserved. / Todos los derechos reservados.
 
 ---
 
 <p align="center">
+  <em>Designed & coded with intention — no templates, no frameworks.</em><br/>
   <em>Diseñado y codificado con intención — sin plantillas, sin frameworks.</em>
 </p>
