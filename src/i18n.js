@@ -246,7 +246,6 @@ export const i18n = {
   }
 };
 
-/* ── TYPING WORDS ─────────────────────────────────── */
 export const typingWords = {
   en: [
     'websites that convert.',
@@ -264,14 +263,12 @@ export const typingWords = {
   ]
 };
 
-/* ── LANGUAGE STATE ────────────────────────────────── */
 let _currentLang = localStorage.getItem('jr-lang') || 'en';
 
 export function getCurrentLang() {
   return _currentLang;
 }
 
-/* ── TYPING EFFECT ─────────────────────────────────── */
 let typingTimer = null;
 
 export function initTyping() {
@@ -302,7 +299,6 @@ export function initTyping() {
   typingTimer = setTimeout(tick, 600);
 }
 
-/* ── applyLang() ───────────────────────────────────── */
 export function applyLang() {
   const dict = i18n[_currentLang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -319,7 +315,6 @@ export function applyLang() {
   if (typeof initTyping === 'function') initTyping();
 }
 
-/* ── switchLang() ──────────────────────────────────── */
 export function switchLang(lang) {
   if (lang === _currentLang) return;
   _currentLang = lang;
@@ -327,7 +322,6 @@ export function switchLang(lang) {
   applyLang();
 }
 
-/* ── initLang() ────────────────────────────────────── */
 export function initLang() {
   document.querySelectorAll('.lang-opt').forEach(opt => {
     opt.addEventListener('click', () => switchLang(opt.dataset.lang));

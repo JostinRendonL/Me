@@ -23,15 +23,11 @@
 import { initLang, applyLang, initTyping } from './i18n.js';
 import { initContactForm } from './formHandler.js';
 
-/* ══════════════════════════════════════════════════════
-   PAGE LOADER
-══════════════════════════════════════════════════════ */
 function initLoader() {
   const loader = document.getElementById('loader');
   window.addEventListener('load', () => {
     setTimeout(() => {
       loader.classList.add('done');
-      /* Trigger hero reveals after loader */
       document.querySelectorAll('.hero .reveal-up').forEach((el, i) => {
         setTimeout(() => el.classList.add('visible'), 100 + i * 120);
       });
@@ -39,9 +35,6 @@ function initLoader() {
   });
 }
 
-/* ══════════════════════════════════════════════════════
-   CUSTOM CURSOR
-══════════════════════════════════════════════════════ */
 function initCursor() {
   if (window.matchMedia('(hover: none)').matches) return;
 
@@ -58,7 +51,6 @@ function initCursor() {
     cursor.style.top  = mouseY + 'px';
   });
 
-  /* Smooth follower via rAF */
   function animateFollower() {
     followerX += (mouseX - followerX) * 0.12;
     followerY += (mouseY - followerY) * 0.12;
@@ -68,7 +60,6 @@ function initCursor() {
   }
   animateFollower();
 
-  /* Hover state on interactive elements */
   const hoverEls = 'a, button, .skill-card, .proj-card, .cert-card, .c-link, .lang-opt, .chip';
   document.querySelectorAll(hoverEls).forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
@@ -85,26 +76,19 @@ function initCursor() {
   });
 }
 
-/* ══════════════════════════════════════════════════════
-   NAVBAR
-══════════════════════════════════════════════════════ */
 function initNavbar() {
   const navbar = document.getElementById('navbar');
 
-  /* Scroll state */
   const onScroll = () => {
     navbar.classList.toggle('scrolled', window.scrollY > 40);
-
-    /* Back to top button */
     const backTop = document.getElementById('backTop');
     if (backTop) backTop.classList.toggle('show', window.scrollY > 600);
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  /* Active section highlight via IntersectionObserver */
-  const sections  = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
 
   const sectionObs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -122,9 +106,6 @@ function initNavbar() {
   sections.forEach(s => sectionObs.observe(s));
 }
 
-/* ══════════════════════════════════════════════════════
-   MOBILE MENU
-══════════════════════════════════════════════════════ */
 function initMobileMenu() {
   const hamburger = document.getElementById('hamburger');
   const overlay   = document.getElementById('mobileOverlay');
@@ -145,23 +126,15 @@ function initMobileMenu() {
 
   hamburger.addEventListener('click', toggle);
 
-  /* Close on mobile link click */
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', close);
   });
 
-  /* Close on Escape */
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') close();
   });
 }
 
-/* ══════════════════════════════════════════════════════
-   SCROLL REVEAL — IntersectionObserver
-   Adds .visible class to .reveal-* elements as they
-   enter the viewport. Stagger is handled via CSS
-   --delay custom property set inline on each element.
-══════════════════════════════════════════════════════ */
 function initScrollReveal() {
   const revealEls = document.querySelectorAll(
     '.reveal-up, .reveal-left, .reveal-right'
@@ -179,15 +152,12 @@ function initScrollReveal() {
     rootMargin: '0px 0px -40px 0px'
   });
 
+  // Hero elements are revealed by the loader sequence, not scroll position.
   revealEls.forEach(el => {
-    /* Skip hero elements — they're triggered by loader instead */
     if (!el.closest('.hero')) observer.observe(el);
   });
 }
 
-/* ══════════════════════════════════════════════════════
-   BACK TO TOP
-══════════════════════════════════════════════════════ */
 function initBackTop() {
   const btn = document.getElementById('backTop');
   if (!btn) return;
@@ -196,9 +166,6 @@ function initBackTop() {
   });
 }
 
-/* ══════════════════════════════════════════════════════
-   SMOOTH SCROLL for all anchor links
-══════════════════════════════════════════════════════ */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
@@ -214,13 +181,10 @@ function initSmoothScroll() {
   });
 }
 
-/* ══════════════════════════════════════════════════════
-   INIT — Run everything on DOMContentLoaded
-══════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   initLoader();
   initLang();
-  applyLang();       // Apply saved/default language on load
+  applyLang();
   initCursor();
   initNavbar();
   initMobileMenu();

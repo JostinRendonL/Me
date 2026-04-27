@@ -21,7 +21,6 @@ const EMAILJS_PUBLIC_KEY  = 'RxtPZYij4D3MxKDPj';
 const EMAILJS_SERVICE_ID  = 'service_sisi0ft';
 const EMAILJS_TEMPLATE_ID = 'template_bw81pge';
 
-/* ── Sanitization Helper ───────────────────────────── */
 /**
  * Strips HTML tags and trims whitespace from user input.
  * @param {string} str - Raw user input
@@ -31,20 +30,12 @@ function sanitize(str) {
   return str.replace(/<[^>]*>/g, '').trim();
 }
 
-/* ── Email Regex ───────────────────────────────────── */
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-/* ══════════════════════════════════════════════════════
-   initContactForm()
-   ──────────────────────────────────────────────────────
-   Initializes EmailJS, binds validation, honeypot check,
-   and form submission with loading/success states.
-══════════════════════════════════════════════════════ */
 export function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  /* Initialize EmailJS SDK */
   emailjs.init(EMAILJS_PUBLIC_KEY);
 
   const nameInput    = document.getElementById('fname');
@@ -55,7 +46,6 @@ export function initContactForm() {
   const successEl    = document.getElementById('formSuccess');
   const honeypot     = form.querySelector('input[name="_honey"]');
 
-  /* ── Error display helper ───────────────────────── */
   function setError(input, errId, show) {
     const group = input.closest('.form-group');
     const err   = document.getElementById(errId);
@@ -63,7 +53,6 @@ export function initContactForm() {
     if (err) err.style.display = show ? 'block' : 'none';
   }
 
-  /* ── Validation ─────────────────────────────────── */
   function validate() {
     let valid = true;
 
@@ -94,7 +83,6 @@ export function initContactForm() {
     return valid;
   }
 
-  /* ── Clear errors on input ──────────────────────── */
   [nameInput, emailInput, subjectInput, msgInput].forEach(input => {
     input.addEventListener('input', () => {
       const errId = input.id === 'fname'    ? 'nameErr'
@@ -104,7 +92,6 @@ export function initContactForm() {
     });
   });
 
-  /* ── Form submission ────────────────────────────── */
   form.addEventListener('submit', async e => {
     e.preventDefault();
 
@@ -118,7 +105,6 @@ export function initContactForm() {
 
     const currentLang = getCurrentLang();
 
-    /* Loading state */
     submitBtn.disabled = true;
     const btnText = submitBtn.querySelector('span');
     if (btnText) btnText.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
@@ -126,11 +112,9 @@ export function initContactForm() {
     try {
       await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
 
-      /* Success state */
       successEl.classList.add('show');
       successEl.querySelector('p').innerHTML = i18n[currentLang]['form.success'];
 
-      /* Hide form elements except success message */
       Array.from(form.children).forEach(child => {
         if (child.id !== 'formSuccess') child.style.display = 'none';
       });
