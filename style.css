@@ -856,6 +856,32 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; border-color: va
   filter: brightness(0.7) saturate(0.8);
 }
 
+/* ▸ LIVE badge (proyectos en producción) */
+.proj-badge-live {
+  position: absolute; top: 12px; left: 12px; z-index: 3;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(10,12,18,0.82); backdrop-filter: blur(8px);
+  color: #fff; font-size: 0.66rem; font-weight: 700;
+  letter-spacing: 0.12em; padding: 5px 10px; border-radius: 99px;
+  border: 1px solid rgba(255,255,255,0.14);
+}
+.live-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #34C759; box-shadow: 0 0 0 0 rgba(52,199,89,0.7);
+  animation: livePulse 1.8s infinite;
+}
+@keyframes livePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(52,199,89,0.6); }
+  70%  { box-shadow: 0 0 0 7px rgba(52,199,89,0); }
+  100% { box-shadow: 0 0 0 0 rgba(52,199,89,0); }
+}
+
+/* ▸ Skill card destacada (Backend & SaaS) */
+.skill-card-accent {
+  border-color: rgba(0,122,255,0.35);
+  background: linear-gradient(160deg, rgba(0,122,255,0.06), transparent 60%);
+}
+
 /* Dark case study placeholder */
 .proj-media-dark {
   display: flex; align-items: center; justify-content: center;

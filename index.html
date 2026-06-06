@@ -79,12 +79,12 @@
   <section class="hero" id="home">
     <!-- Floating tech tags (Antigravity effect) -->
     <div class="hero-floats" aria-hidden="true">
-      <span class="float-tag" style="--dx:15vw;--dy:18vh;--delay:0s">WordPress</span>
+      <span class="float-tag" style="--dx:15vw;--dy:18vh;--delay:0s">FastAPI</span>
       <span class="float-tag" style="--dx:78vw;--dy:12vh;--delay:0.4s">Python</span>
-      <span class="float-tag" style="--dx:8vw;--dy:72vh;--delay:0.8s">Elementor</span>
+      <span class="float-tag" style="--dx:8vw;--dy:72vh;--delay:0.8s">Docker</span>
       <span class="float-tag" style="--dx:82vw;--dy:68vh;--delay:1.2s">Linux</span>
       <span class="float-tag" style="--dx:50vw;--dy:8vh;--delay:0.2s">IBM Certified</span>
-      <span class="float-tag" style="--dx:60vw;--dy:82vh;--delay:1.6s">Cybersecurity</span>
+      <span class="float-tag" style="--dx:60vw;--dy:82vh;--delay:1.6s">Playwright</span>
       <span class="float-tag" style="--dx:25vw;--dy:88vh;--delay:1s">SQL</span>
       <span class="float-tag" style="--dx:90vw;--dy:40vh;--delay:0.6s">Git</span>
     </div>
@@ -121,7 +121,7 @@
 
       <div class="hero-stats reveal-up" style="--delay:0.6s">
         <div class="stat">
-          <span class="stat-num">3+</span>
+          <span class="stat-num">8+</span>
           <span class="stat-label" data-i18n="hero.stat1">Real Projects</span>
         </div>
         <div class="stat-div" aria-hidden="true"></div>
@@ -206,12 +206,21 @@
 
       <div class="skills-grid">
 
-        <div class="skill-card reveal-up" style="--delay:0s">
+        <div class="skill-card skill-card-accent reveal-up" style="--delay:0s">
+          <div class="skill-icon">🚀</div>
+          <h3 data-i18n="skill.backend">Backend & SaaS</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>FastAPI</span><span>SQLite</span>
+            <span>Docker</span><span>REST APIs</span><span>Playwright</span><span>Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" style="--delay:0.05s">
           <div class="skill-icon">⚡</div>
           <h3 data-i18n="skill.web">Web Development</h3>
           <div class="skill-tags">
-            <span>WordPress</span><span>Elementor</span><span>HTML5</span>
-            <span>CSS3</span><span>JavaScript</span><span>Astra</span>
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            <span>WordPress</span><span>Elementor</span><span>Responsive</span>
           </div>
         </div>
 
@@ -423,8 +432,93 @@
 
       <div class="projects-grid">
 
+        <!-- ★ FEATURED — JR Verifica EC (SaaS en producción) -->
+        <div class="proj-card proj-card-featured reveal-up" style="--delay:0s">
+          <div class="proj-media">
+            <span class="proj-badge-live"><span class="live-dot"></span>LIVE</span>
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80" alt="JR Verifica EC — SaaS de verificación de antecedentes" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>Python</span><span>FastAPI</span><span>SQLite</span><span>Docker</span><span>Playwright</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://verifica.dentaklin.shop" target="_blank" rel="noopener noreferrer" class="proj-link" data-i18n="proj.demo">Live Demo</a>
+                <a href="https://github.com/JostinRendonL/jr-verifica-ec" target="_blank" rel="noopener noreferrer" class="proj-link proj-link-ghost" data-i18n="proj.code">Source Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.saas">SaaS · Full-Stack</span>
+            <h3 class="proj-name">JR Verifica EC</h3>
+            <p class="proj-desc" data-i18n="proj.descV">SaaS de verificación de antecedentes que consulta 4 fuentes oficiales del Estado ecuatoriano en paralelo y devuelve un semáforo de riesgo. Multi-usuario, PDFs con QR verificable, cumplimiento legal LOPDP, 100+ tests. En producción para RUBASA.</p>
+          </div>
+        </div>
+
+        <!-- ★ Background Checks API -->
+        <div class="proj-card reveal-up" style="--delay:0.05s">
+          <div class="proj-media">
+            <span class="proj-badge-live"><span class="live-dot"></span>API</span>
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80" alt="Background Checks Ecuador API" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>FastAPI</span><span>Playwright</span><span>Redis</span><span>Docker</span><span>2captcha</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/JostinRendonL/background-checks-ec" target="_blank" rel="noopener noreferrer" class="proj-link" data-i18n="proj.code">Source Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.backend">Backend · API REST</span>
+            <h3 class="proj-name">Background Checks API</h3>
+            <p class="proj-desc" data-i18n="proj.descBG">API REST con scrapers concurrentes que consultan 4 portales oficiales del Estado en ~10 segundos. Cache Redis, resolución automática de captchas, rotación de proxies residenciales, healthcheck profundo y métricas Prometheus.</p>
+          </div>
+        </div>
+
+        <!-- ★ RUBASA CV Worker -->
+        <div class="proj-card reveal-up" style="--delay:0.1s">
+          <div class="proj-media">
+            <span class="proj-badge-live"><span class="live-dot"></span>LIVE</span>
+            <img src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=800&q=80" alt="RUBASA CV Worker — filtrado de CVs con IA" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>Python</span><span>OpenAI</span><span>Gemini</span><span>Google Sheets</span><span>Telegram</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/JostinRendonL/rubasa-cv-worker" target="_blank" rel="noopener noreferrer" class="proj-link" data-i18n="proj.code">Source Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.ai">IA · Automatización</span>
+            <h3 class="proj-name">RUBASA CV Worker</h3>
+            <p class="proj-desc" data-i18n="proj.descCV">Sistema hands-free de filtrado de hojas de vida con cadena de IAs y fallback automático (GPT-4o → Gemini → Llama). Recibe postulaciones, analiza el CV, cruza con verificación de antecedentes y escribe el reporte. Alerta por Telegram en casos críticos.</p>
+          </div>
+        </div>
+
+        <!-- ★ Marcaciones App -->
+        <div class="proj-card reveal-up" style="--delay:0.15s">
+          <div class="proj-media">
+            <span class="proj-badge-live"><span class="live-dot"></span>LIVE</span>
+            <img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?w=800&q=80" alt="Marcaciones App — OCR biométrico" loading="lazy" />
+            <div class="proj-overlay">
+              <div class="proj-stack">
+                <span>Python</span><span>Streamlit</span><span>OCR</span><span>Tesseract</span><span>openpyxl</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/JostinRendonL/marcaciones-app" target="_blank" rel="noopener noreferrer" class="proj-link" data-i18n="proj.code">Source Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-info">
+            <span class="proj-cat" data-i18n="proj.cat.automation">Automatización · OCR</span>
+            <h3 class="proj-name">Marcaciones App</h3>
+            <p class="proj-desc" data-i18n="proj.descMA">App web que automatiza el procesamiento de marcaciones biométricas: lee Excel del reloj, extrae registros manuales desde fotos con OCR, asigna turnos automáticamente y calcula pagos. Genera reportes de asistencia listos para RR.HH.</p>
+          </div>
+        </div>
+
         <!-- Project 1 -->
-        <div class="proj-card reveal-up" style="--delay:0s">
+        <div class="proj-card reveal-up" style="--delay:0.2s">
           <div class="proj-media">
             <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="La Cueva Restaurant" loading="lazy" />
             <div class="proj-overlay">
