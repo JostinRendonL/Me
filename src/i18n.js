@@ -327,6 +327,9 @@ export function applyLang() {
     const key = el.getAttribute('data-i18n-placeholder');
     if (dict[key] !== undefined) el.placeholder = dict[key];
   });
+  // CV se descarga en el idioma activo (ES o EN)
+  const cv = document.getElementById('cvDownload');
+  if (cv) cv.href = _currentLang === 'es' ? 'CV_Jostin_Rendon_ES.pdf' : 'CV_Jostin_Rendon_EN.pdf';
   document.querySelectorAll('.lang-opt').forEach(opt => {
     opt.classList.toggle('active', opt.dataset.lang === _currentLang);
   });
